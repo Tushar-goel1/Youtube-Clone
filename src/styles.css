@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollbar-w-2::-webkit-scrollbar {
+    width: 0;
+    transition: width 0.3s;
+  }
+  
+  .scrollbar-w-2 {
+    scrollbar-width: none;
+    transition: scrollbar-width 0.3s;
+  }
+  .scrollbar-w-2 {
+    -ms-overflow-style: none;
+  }
+  
+  .scrollbar-w-2:hover::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+  .scrollbar-w-2:hover {
+    scrollbar-width: thin; 
+  }
+  
+  .scrollbar-w-2:hover {
+    -ms-overflow-style: auto;
+  }
+  
