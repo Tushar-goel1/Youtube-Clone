@@ -1,5 +1,5 @@
 import React from 'react';
-import GetTimeDiff from '../const/getTimeDiff';
+import GetTimeDiff from '../const/GetTimeDiff';
 import { useSelector } from 'react-redux';
 
 const VideoCard = ({info}) => {
