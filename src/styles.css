@@ -6,7 +6,9 @@
     width: 0;
     transition: width 0.3s;
   }
-  
+  .scrollbar-w-0{
+    scrollbar-width: none;
+  }
   .scrollbar-w-2 {
     scrollbar-width: none;
     transition: scrollbar-width 0.3s;

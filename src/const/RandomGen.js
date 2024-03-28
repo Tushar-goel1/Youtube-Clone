@@ -36,3 +36,14 @@ export function RandomMessageGen(length) {
     }
     return result;
 }
+export const formatViewCount = (viewCount,n) => {
+  if (viewCount >= 1000000000) {
+    return (viewCount / 1000000000).toFixed(n) + 'B';
+  } else if (viewCount >= 1000000) {
+    return (viewCount / 1000000).toFixed(n) + 'M';
+  } else if (viewCount >= 1000) {
+    return (viewCount / 1000).toFixed(n) + 'K';
+  } else {
+    return viewCount;
+  }
+};

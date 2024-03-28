@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import React from 'react'
 
 const LiveChat = ({name,message}) => {
-  console.log(name,message);
   return (
     <div className='flex p-1 pl-1 m-1 font-sans'>
         <img className="h-7 w-7"

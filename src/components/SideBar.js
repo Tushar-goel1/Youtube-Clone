@@ -58,22 +58,54 @@ const SideBar = () => {
            alt="shorts"
            src="https://cdn.pixabay.com/photo/2021/05/05/12/16/shorts-png-6230962_960_720.png"
         />
-        <span className=''>Shorts</span>
+        <span >Shorts</span>
         </li>
         <li className='flex h-8 hover:bg-gray-300 rounded-lg mt-1 p-1'>
         <img className="h-5 w-5 mx-2 mt-1 mr-4"
            alt="Subscription"
            src="https://static.thenounproject.com/png/4530414-200.png"
         />
-        <span className=''>Subscription</span>
+        <span>Subscription</span>
         </li>
       </ul>
       <h4 className="pt-2 font-bold pb-2">You </h4>
       <ul className="pl-1 border-b-2 pb-3">
-        <li>History</li>
-        <li>Like Videos</li>
-        <li>Watch later</li>
-        <li>Your Videos</li>
+         <li >
+            <Link to="HistoryPage" className='flex hover:bg-gray-300 rounded-lg h-10 p-1 pt-2'>
+               <img className="h-5 w-5  mx-1 mr-4 mt-0.5"
+                  alt="History png"
+                  src="https://cdn.iconscout.com/icon/premium/png-256-thumb/history-1772990-1508932.png"
+               />
+               <span>History</span>
+            </Link>
+         </li>
+         <li >
+            <Link to="LikePage" className='flex hover:bg-gray-300 rounded-lg h-10 p-1.5'>
+               <img className="h-5 w-5  mx-1 mr-4 mt-0.5"
+                  alt="History png"
+                  src="https://www.clipartmax.com/png/middle/225-2253438_video-comments-video-icon-vector-png.png"
+               />
+               <span>Like Videos</span>
+            </Link>
+         </li>
+         <li >
+            <Link to="LikePage" className='flex hover:bg-gray-300 rounded-lg h-10 p-1.5'>
+               <img className="h-5 w-5  mx-1 mr-4 mt-0.5"
+                  alt="Watch Later"
+                  src="https://cdn.iconscout.com/icon/free/png-256/free-watch-later-1781603-1513853.png"
+               />
+               <span>Watch Later</span>
+            </Link>
+         </li>
+         <li >
+            <Link to="LikePage" className='flex hover:bg-gray-300 rounded-lg h-10 p-1.5'>
+               <img className="h-5 w-5  mx-1 mr-4 mt-0.5"
+                  alt="Your Video"
+                  src="https://clipart-library.com/new_gallery/795544_video-player-icon-png.png"
+               />
+               <span>Your Videos</span>
+            </Link>
+         </li>
       </ul>
       <h4 className="pt-2 font-bold pb-2 pl-2">Explore</h4>
       <ul className="pl-1 border-b-2 pb-3 text-sm ">
@@ -157,35 +189,100 @@ const SideBar = () => {
         <span className='pt-0.5'>Fashion & Beauty</span>
         </Link>
         </li>
-        <li ><Link to="/" className='flex hover:bg-gray-300 rounded-lg h-9 p-1'>
-        <img className="h-5 w-5  mx-2 mr-4 mt-0.5"
+        <li >
+         <Link to="/" className='flex hover:bg-gray-300 rounded-lg h-9 p-1'>
+         <img className="h-5 w-5  mx-2 mr-4 mt-0.5"
            alt="Podcasts icon"
            src="https://cdn-icons-png.flaticon.com/512/1508/1508572.png"
-        />
-        <span className='pt-0.5'>Podcasts</span>
-        </Link>
+         />
+         <span className='pt-0.5'>Podcasts</span>
+         </Link>
         </li>
       </ul>
       <h4 className="pt-2 font-bold pb-2">More From YouTube </h4>
       <ul className="pl-1 border-b-2 pb-3">
-        <li>YouTube Premium</li>
-        <li>YouTube Studio</li>
-        <li>YouTube Music</li>
-        <li>YouTube Kids</li>
+      <li >
+         <Link to="/" className='flex hover:bg-gray-300 rounded-lg h-9 p-1'>
+         <img className="h-5 w-5  mx-2 mr-4 mt-0.5"
+           alt="Podcasts icon"
+           src="https://toppng.com/uploads/preview/youtube-icon-logo-transparent-youtube-11553542027nec8a4iwhh.png"
+         />
+         <span className='pt-0.5'>Youtube Premium</span>
+         </Link>
+        </li>
+        <li >
+         <Link to="/" className='flex hover:bg-gray-300 rounded-lg h-9 p-1'>
+         <img className="h-5 w-5  mx-2 mr-4 mt-0.5"
+           alt="Podcasts icon"
+           src="https://toppng.com/uploads/preview/youtube-icon-logo-transparent-youtube-11553542027nec8a4iwhh.png"
+         />
+         <span className='pt-0.5'>Youtube Studios</span>
+         </Link>
+        </li>
+        <li >
+         <Link to="/" className='flex hover:bg-gray-300 rounded-lg h-9 p-1'>
+         <img className="h-5 w-5  mx-2 mr-4 mt-0.5"
+           alt="Podcasts icon"
+           src="https://toppng.com/uploads/preview/youtube-icon-logo-transparent-youtube-11553542027nec8a4iwhh.png"
+         />
+         <span className='pt-0.5'>Youtube Music</span>
+         </Link>
+        </li>
+        <li >
+         <Link to="/" className='flex hover:bg-gray-300 rounded-lg h-9 p-1'>
+         <img className="h-5 w-5  mx-2 mr-4 mt-0.5"
+           alt="Podcasts icon"
+           src="https://toppng.com/uploads/preview/youtube-icon-logo-transparent-youtube-11553542027nec8a4iwhh.png"
+         />
+         <span className='pt-0.5'>Youtube Kids</span>
+         </Link>
+        </li>
       </ul>
       <ul className="pl-1 border-b-2  mt-4 pb-5">
-        <li className='hover:bg-gray-300 rounded-lg h-8 p-1'>Settings</li>
-        <li>Report History</li>
-        <li>Help</li>
-        <li>Send Feedback</li>
+      <li >
+         <Link to="/" className='flex hover:bg-gray-300 rounded-lg h-9 p-1'>
+         <img className="h-5 w-5  mx-2 mr-4 mt-0.5"
+           alt="Podcasts icon"
+           src="https://w7.pngwing.com/pngs/828/543/png-transparent-computer-icons-service-technology-setting-miscellaneous-service-business-thumbnail.png"
+         />
+         <span className='pt-0.5'>Settings</span>
+         </Link>
+      </li>
+      <li >
+         <Link to="/" className='flex hover:bg-gray-300 rounded-lg h-9 p-1'>
+         <img className="h-5 w-5  mx-2 mr-4 mt-0.5"
+           alt="Podcasts icon"
+           src="https://cdn.iconscout.com/icon/premium/png-256-thumb/report-setting-3795377-3448203.png"
+         />
+         <span className='pt-0.5'>Report Settings</span>
+         </Link>
+      </li>
+         <li>
+         <Link to="/" className='flex hover:bg-gray-300 rounded-lg h-9 p-1'>
+         <img className="h-5 w-5  mx-2 mr-4 mt-0.5"
+           alt="Podcasts icon"
+           src="https://cdn-icons-png.freepik.com/256/18/18436.png"
+         />
+         <span className='pt-0.5'>Help</span>
+         </Link>
+      </li>
+      <li >
+         <Link to="/" className='flex hover:bg-gray-300 rounded-lg h-9 p-1'>
+         <img className="h-5 w-5  mx-2 mr-4 mt-0.5"
+           alt="Podcasts icon"
+           src="https://static.thenounproject.com/png/4172841-200.png"
+         />
+         <span className='pt-0.5'>Send Feedback</span>
+         </Link>
+      </li>
       </ul>
       <div className='text-sm m-3'>
-      <p>About Press Copyright </p>
-      <p>Contact us Creaters</p>
-      <p className='pb-3'> Advertise Developers</p>
-      <p>Terms Privacy Policy & Safety</p>
-      <p>How Youtube Works</p>
-      <p>Text new features</p>
+         <p>About Press Copyright </p>
+         <p>Contact us Creaters</p>
+         <p className='pb-3'> Advertise Developers</p>
+         <p>Terms Privacy Policy & Safety</p>
+         <p>How Youtube Works</p>
+         <p>Text new features</p>
       </div>
       <footer className='h-10 mb-12 font-light text-xs ml-3'>@2024 Google LLC</footer>
     </div>

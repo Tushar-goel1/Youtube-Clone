@@ -13,11 +13,12 @@ const Head = () => {
 
   const getApiCall=async()=>{
     const data=await fetch(YOUTUBE_SEARCH_API + searchQuery);
-    const response=await data.json();
-    setSuggestions(response[1]);
+    const str = await data.text();
+    const response = await JSON.parse(str.substring(str.indexOf("["), str.indexOf("])") + 1));
+    setSuggestions(response[1].slice(0,10));
     dispatch(
       cacheResults({
-        [searchQuery]:response[1],
+        [searchQuery]:response[1].slice(0,10),
       })
     )
   }
@@ -50,14 +51,15 @@ const Head = () => {
         alt="Hamberger-menu" src="https://icons.veryicon.com/png/o/miscellaneous/linear-icon-45/hamburger-menu-4.png"
         />
 
-        <img className="h-7 w-15 pl-3"
+        <img className="h-7 w-32 pl-3"
         alt="YT" src="https://vectorseek.com/wp-content/uploads/2021/01/YouTube-Logo-Vector.png"
         />
 
       </div>
+      
       <div className='flex'>
         <div className="pl-3 p-1 w-[35rem] border border-gray-500 rounded-l-full "  >
-        <input className='pt-1 w-[32rem] pl-1 outline-none'
+        <input className='pt-1 w-[33vw] pl-1 outline-none'
           type="text" placeholder='Search'
           value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)}
           onFocus={()=>setOnSearchBar(true)}
@@ -79,7 +81,7 @@ const Head = () => {
       (
       <div className='z-50 fixed top-12  bg-white p-2  pl-2 ml-1  w-[35rem] rounded-lg mt-2 '>
       <ul>
-      {suggestions.map((suggestions)=>
+      {suggestions && suggestions.map((suggestions)=>
         <li key={suggestions} 
         className='hover:bg-gray-200  font-semibold font-sans p-1 flex cursor-pointer'
         >
@@ -88,7 +90,7 @@ const Head = () => {
           className='h-5 mt-1 w-8 pr-3'
           src='https://cdn.icon-icons.com/icons2/1369/PNG/512/-history_89998.png'/>
         } 
-         {suggestions}
+         {suggestions[0]}
         </li>
       )}
       </ul>

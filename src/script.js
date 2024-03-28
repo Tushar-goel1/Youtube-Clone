@@ -4,12 +4,12 @@ import Head from "./components/Head"
 import { Provider } from "react-redux";
 import store from "./utils/store";
 import {  RouterProvider, createBrowserRouter } from "react-router-dom";
-import MainContainer from "./components/MainContainer";
 import Body from "./components/Body"
 import WatchPage from "./components/WatchPage";
-import SearchVideoCard from "./components/SearchVideoCard";
 import VideoContainer from "./components/VideoContainer"
 import dotenv from 'dotenv'
+import HistoryPage from "./components/HistoryPage";
+import LikePage from "./components/LikePage";
 
 dotenv.config()
 const App=()=>{
@@ -28,21 +28,19 @@ const approutes=createBrowserRouter([{
     children:[
         {
             path:"/",
-            element:<MainContainer/>,
-            children:[
-                {
-                    path:"/",
-                    element:<VideoContainer/>
-                },
-                {
-                    path:"search",
-                    element:<SearchVideoCard/>
-                }
-            ]
+            element:<VideoContainer/>
         },
         {
             path:"watch",
             element:<WatchPage/>
+        },
+        {
+            path:"HistoryPage",
+            element:<HistoryPage/>
+        },
+        {
+            path:"LikePage",
+            element:<LikePage/>
         }
     ]
 }])

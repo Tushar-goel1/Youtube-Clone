@@ -4,6 +4,7 @@ const appSlice = createSlice({
     initialState:{
         isMenuOpen:true,
         isHomePage:true,
+        ToShowMore:false,
     },
     reducers:{
         toggleMenu:(state)=>{
@@ -14,7 +15,10 @@ const appSlice = createSlice({
             state.isHomePage=false;
             state.isMenuOpen=false;
         },
+        toggleShow:(state)=>{
+            state.ToShowMore=!state.ToShowMore;
+        }
     },
 });
 export default appSlice.reducer
-export const {toggleMenu,toggleWatch} = appSlice.actions
+export const {toggleMenu,toggleWatch,toggleShow} = appSlice.actions
