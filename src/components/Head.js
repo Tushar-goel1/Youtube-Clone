@@ -12,7 +12,7 @@ const Head = () => {
   const searchCache=useSelector(store=>store.search)
 
   const getApiCall=async()=>{
-    const data=await fetch(YOUTUBE_SEARCH_API + searchQuery);
+    const data=await fetch(YOUTUBE_SEARCH_API + searchQuery,{mode:'no-cors'});
     const str = await data.text();
     const response = await JSON.parse(str.substring(str.indexOf("["), str.indexOf("])") + 1));
     setSuggestions(response[1].slice(0,10));
