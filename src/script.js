@@ -6,10 +6,10 @@ import store from "./utils/store";
 import {  RouterProvider, createBrowserRouter } from "react-router-dom";
 import Body from "./components/Body"
 import WatchPage from "./components/WatchPage";
-import VideoContainer from "./components/VideoContainer"
 import dotenv from 'dotenv'
 import HistoryPage from "./components/HistoryPage";
 import LikePage from "./components/LikePage";
+import MainContainer from "./components/MainContainer";
 
 dotenv.config()
 const App=()=>{
@@ -28,7 +28,7 @@ const approutes=createBrowserRouter([{
     children:[
         {
             path:"/",
-            element:<VideoContainer/>
+            element:<MainContainer/>
         },
         {
             path:"watch",
