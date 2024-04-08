@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react'
 import Youtube_Video_API from "../const/Apis"
 import VideoCard from './VideoCard';
 import { Link} from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { HistoryVideos } from '../utils/storeageSlice';
 
 const VideoContainer = () => {
   const [video,setVideo]=useState([]);
-  const isMenuOpen=useSelector((store)=>store.app.isMenuOpen)
   const dispatch=useDispatch();
   useEffect(()=>{
     getvideofunc();
@@ -20,7 +19,7 @@ const VideoContainer = () => {
   };
 
   return (
-    <div className={`flex flex-wrap pt-2 mt-16 -z-50 absolute cursor-pointer ${isMenuOpen?'ml-56':'ml-20'}`}>
+    <div className={`flex flex-wrap pt-2 mt-16 -z-50 absolute cursor-pointer`}>
     
       {video && video.map((videos)=>(
         <Link key={videos.id} to={"/watch?v="+videos.id} state={{info:videos}}
